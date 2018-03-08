@@ -5,17 +5,45 @@
  */
 package tienda;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 /**
  *
  * @author Raul
  */
 public class Reporte {
     private String noReporte;
-    private Venta ventas;
+    private Date fechaRep;
+    ArrayList<Venta> ventas;
 
-    public Reporte(String noReporte, Venta ventas) {
+    public Reporte(String noReporte, Date fechaRep) {
         this.noReporte = noReporte;
-        this.ventas = ventas;
+        this.fechaRep = fechaRep;
+    }
+    
+    private void reporte(){
+        if(!ventas.isEmpty()){
+            System.out.println("# Reporte: "+noReporte);
+            System.out.println("Fecha de reporte: "+fechaRep);
+            System.out.println("Ventas realizadas: ");
+            for(int i = 0; i < ventas.size(); i++){
+                System.out.println("Fecha de venta: "+ventas.get(i).getFecha());
+                ventas.get(i).imprimirVendedor();
+            }
+        }else
+            System.out.print("No se encontraron ventas en esa fecha");
+    }
+    
+    public void reportBySellDate(Date fechaventa, ArrayList<Venta> todasventas){
+        if(!todasventas.isEmpty()){
+            for(int i = 0; i < todasventas.size(); i++){
+                if(todasventas.get(i).getFecha() == fechaventa){
+                    ventas.set(i, todasventas.get(i));
+                }
+            }
+        }
+        reporte();
     }
 
     /**
@@ -26,9 +54,9 @@ public class Reporte {
     }
 
     /**
-     * @return the ventas
+     * @return the fechaRep
      */
-    public Venta getVentas() {
-        return ventas;
+    public Date getFechaRep() {
+        return fechaRep;
     }
 }

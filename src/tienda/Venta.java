@@ -48,27 +48,6 @@ public class Venta {
     }
 
     /**
-     * @return the p
-     */
-    public ArrayList<Producto> getP() {
-        return p;
-    }
-
-    /**
-     * @return the pp
-     */
-    public ArrayList<ProductoPerecedero> getPp() {
-        return pp;
-    }
-
-    /**
-     * @return the vendedor
-     */
-    public Vendedor getVendedor() {
-        return vendedor;
-    }
-
-    /**
      * @return the cantidad
      */
     public int getCantidad() {
@@ -80,5 +59,20 @@ public class Venta {
      */
     public float getApagar() {
         return apagar;
+    }
+    
+    public void imprimirVendedor(){
+        System.out.println("Vendedor: ");
+        System.out.println("\n\tID del vendedor: "+vendedor.getIdVendedor());
+        System.out.println("\n\tNombre: "+vendedor.getNombre());
+        System.out.println("\n\tRFC: "+vendedor.getRfc());
+    }
+    
+    public void imprimirProd(){
+        if(!p.isEmpty()){
+            for(int i = 0; i < p.size(); i++){
+                System.out.println("");
+            }
+        }
     }
 }
