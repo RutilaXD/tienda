@@ -16,12 +16,14 @@ public class ProductoPerecedero {
     private Date caducidad;
     private Date compra;
     private int diasAlmacen;
+    private float precio;
 
-    public ProductoPerecedero(String product, Date caducidad, Date compra, int diasAlmacen) {
+    public ProductoPerecedero(String product, Date caducidad, Date compra, int diasAlmacen, float precio) {
         this.product = product;
         this.caducidad = caducidad;
         this.compra = compra;
         this.diasAlmacen = diasAlmacen;
+        this.precio = precio;
     }
 
     /**
@@ -57,5 +59,19 @@ public class ProductoPerecedero {
      */
     public void setDiasAlmacen(int diasAlmacen) {
         this.diasAlmacen = diasAlmacen;
+    }
+
+    /**
+     * @return the precio
+     */
+    public float getPrecio() {
+        return precio;
+    }
+
+    /**
+     * @param precio the precio to set
+     */
+    public void setPrecio(float precio) {
+        this.precio = precio;
     }
 }
