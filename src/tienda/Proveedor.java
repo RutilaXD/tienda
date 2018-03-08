@@ -5,6 +5,8 @@
  */
 package tienda;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Raul
@@ -12,7 +14,13 @@ package tienda;
 public class Proveedor {
     private String empresa;
     private String telefono;
-    private Producto producto;
+    private ArrayList<Producto> lstP;
+
+    public Proveedor(String empresa, String telefono, ArrayList<Producto> lstP) {
+        this.empresa = empresa;
+        this.telefono = telefono;
+        this.lstP = lstP;
+    }
 
     /**
      * @return the empresa
@@ -36,16 +44,16 @@ public class Proveedor {
     }
 
     /**
-     * @return the producto
+     * @return the lstP
      */
-    public Producto getProducto() {
-        return producto;
+    public ArrayList<Producto> getLstP() {
+        return lstP;
     }
 
     /**
-     * @param producto the producto to set
+     * @param lstP the lstP to set
      */
-    public void setProducto(Producto producto) {
-        this.producto = producto;
+    public void setLstP(ArrayList<Producto> lstP) {
+        this.lstP = lstP;
     }
 }

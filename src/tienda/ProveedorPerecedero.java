@@ -5,6 +5,8 @@
  */
 package tienda;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Raul
@@ -14,7 +16,15 @@ public class ProveedorPerecedero {
     private String local;
     private String tel;
     private String encargado;
-    private ProductoPerecedero perecedero;
+    private ArrayList<ProductoPerecedero> lstPP;
+
+    public ProveedorPerecedero(String nombreP, String local, String tel, String encargado, ArrayList<ProductoPerecedero> lstPP) {
+        this.nombreP = nombreP;
+        this.local = local;
+        this.tel = tel;
+        this.encargado = encargado;
+        this.lstPP = lstPP;
+    }
 
     /**
      * @return the nombreP
@@ -59,16 +69,16 @@ public class ProveedorPerecedero {
     }
 
     /**
-     * @return the perecedero
+     * @return the lstPP
      */
-    public ProductoPerecedero getPerecedero() {
-        return perecedero;
+    public ArrayList<ProductoPerecedero> getLstPP() {
+        return lstPP;
     }
 
     /**
-     * @param perecedero the perecedero to set
+     * @param lstPP the lstPP to set
      */
-    public void setPerecedero(ProductoPerecedero perecedero) {
-        this.perecedero = perecedero;
+    public void setLstPP(ArrayList<ProductoPerecedero> lstPP) {
+        this.lstPP = lstPP;
     }
 }
