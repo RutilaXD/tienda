@@ -56,4 +56,13 @@ public class Proveedor {
     public void setLstP(ArrayList<Producto> lstP) {
         this.lstP = lstP;
     }
+    
+    public void imprimirProductos(){
+        System.out.println("Productos provistos por: "+empresa);
+        for(Producto p: lstP){
+            System.out.println("\tcodigo: "+p.getCodigo());
+            System.out.println("\tProducto: "+p.getProduct());
+            System.out.println("\tPrecio: "+p.getPrecio());
+        }
+    }
 }

@@ -11,14 +11,14 @@ import java.util.ArrayList;
  *
  * @author Raul
  */
-public class ProveedorPerecedero {
+public class Proveedorp {
     private String nombreP;
     private String local;
     private String tel;
     private String encargado;
-    private ArrayList<ProductoPerecedero> lstPP;
+    private ArrayList<Perecedero> lstPP;
 
-    public ProveedorPerecedero(String nombreP, String local, String tel, String encargado, ArrayList<ProductoPerecedero> lstPP) {
+    public Proveedorp(String nombreP, String local, String tel, String encargado, ArrayList<Perecedero> lstPP) {
         this.nombreP = nombreP;
         this.local = local;
         this.tel = tel;
@@ -71,14 +71,25 @@ public class ProveedorPerecedero {
     /**
      * @return the lstPP
      */
-    public ArrayList<ProductoPerecedero> getLstPP() {
+    public ArrayList<Perecedero> getLstPP() {
         return lstPP;
     }
 
     /**
      * @param lstPP the lstPP to set
      */
-    public void setLstPP(ArrayList<ProductoPerecedero> lstPP) {
+    public void setLstPP(ArrayList<Perecedero> lstPP) {
         this.lstPP = lstPP;
+    }
+    
+    public void imprimirPerecederos(){
+        System.out.println("Productos provistos por: "+encargado);
+        for(Perecedero p : lstPP){
+            System.out.println("Producto: "+p.getProduct());
+            System.out.println("Caducidad: "+p.getProduct());
+            System.out.println("Compra: "+p.getProduct());
+            System.out.println("Días en almacen: "+p.getProduct());
+            System.out.println("Precio: "+p.getPrecio());
+        }
     }
 }

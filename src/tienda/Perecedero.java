@@ -11,14 +11,14 @@ import java.util.Date;
  *
  * @author Raul
  */
-public class ProductoPerecedero {
+public class Perecedero {
     private String product;
     private Date caducidad;
     private Date compra;
     private int diasAlmacen;
     private float precio;
 
-    public ProductoPerecedero(String product, Date caducidad, Date compra, int diasAlmacen, float precio) {
+    public Perecedero(String product, Date caducidad, Date compra, int diasAlmacen, float precio) {
         this.product = product;
         this.caducidad = caducidad;
         this.compra = compra;
